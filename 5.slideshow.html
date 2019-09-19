@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+            $(document).ready(function(){
+                var ind = 1;
+                show(ind);
+            $("#aa").click(function(){
+                var n=1;
+                show(ind += n);
+            });
+            $("#bb").click(function(){
+                var n=-1;
+                show(ind += n);
+            });    
+            function show(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {ind = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              x[ind-1].style.display = "block";  
+            }
+            });
+            </script>
+            
+
+</head>
+<body>
+      <div class="w3-content w3-display-container">
+          <img class="mySlides" src="1.jpg" style="width:20%">
+          <img class="mySlides" src="2.jpg" style="width:20%">
+          <img class="mySlides" src="3.jpg" style="width:20%">
+        
+          <button  id="aa">&#10094;</button>
+          <button  id="bb">&#10095;</button>
+        </div>
+</body>
+</html>
