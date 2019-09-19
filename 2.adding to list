@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Basics</title>
+    <!-- In order to use jQuery, you need to load it with a script tag -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+
+    
+</head>
+<body>
+
+<form>
+    <input type="text" id="nn">
+    <input type="button" value="click" name="aa">
+    <ul></ul>
+</form>
+<script>
+    
+$(document).ready(function() {
+    $("input[name=aa]").click(function(){
+        var bla=$('#nn').val();
+        console.log(bla);
+        $("ul").append("<li>" + bla + "</li>");
+    });
+    
+
+    
+    
+});
+</script>
+
+
+
+</body>
+</html>
