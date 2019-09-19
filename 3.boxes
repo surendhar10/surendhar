@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+          $(document).ready(function() {
+               $("#button_toggle_color").click(function() {
+                    $("div").css("background-color","blue");
+                    
+               });
+          });
+
+          $(document).ready(function() {
+               $("#button_toggle_roundedges").click(function() {
+                    $("div").css("border-radius","100px");
+                    
+               });
+          });
+
+          $(document).ready(function() {
+               $("#button_add_box").click(function() {
+                    $("#box3").after("<div  style='border-color:black;border-style:solid;height:100px;width:100px;display:inline-block;margin:20px'></div>")
+               });
+          });
+
+   </script>
+</head>
+<style>
+      .boxoutlined{
+                  border-color:black;
+                  border-style:solid;
+                  height      :100px;
+                  width       :100px;
+                  display     :inline-block;
+                  margin      :20px;
+                  }
+                        
+</style>
+<body>
+     <div id="box1" class="boxoutlined"></div>
+     <div id="box2" class="boxoutlined"></div>
+     <div id="box3" class="boxoutlined"></div>
+     
+     <form>
+          <input type="button" value="Toggle Colors"          id="button_toggle_color">
+          <input type="button" value="Toggle Rounded Borders" id="button_toggle_roundedges">
+          <input type="button" value="Add a New Box"          id="button_add_box">        
+     </form>
+     
+     
+     
+</body>
+</html>
